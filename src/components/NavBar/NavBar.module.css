@@ -1,0 +1,135 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+.leftSide {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #000;
+}
+.menuBtn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.menuBtn:hover {
+  background: #f1f5f9;
+}
+.menuIcon {
+  position: relative;
+  width: 18px;
+  height: 2px;
+  background: #000;
+}
+.menuIcon::before,
+.menuIcon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: #000;
+}
+.menuIcon::before {
+  top: -6px;
+}
+.menuIcon::after {
+  top: 6px;
+}
+
+.links {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 16px;
+}
+.linksOpen {
+  display: flex;
+}
+.mobileActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  justify-content: space-between;
+  width: 100%;
+}
+.link,
+.linkActive {
+  color: #000;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  width: max-content;
+}
+.link:hover {
+  background: #f1f5f9;
+}
+.linkActive {
+  background: #e5e7eb;
+}
+.right {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+.role {
+  opacity: 0.8;
+  font-size: 14px;
+}
+.logoutBtn {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #ef4444;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menuBtn {
+    display: none;
+  }
+  .links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    gap: 10px;
+  }
+  .mobileActions {
+    display: none;
+  }
+  .right {
+    display: flex;
+  }
+}
