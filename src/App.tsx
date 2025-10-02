@@ -11,8 +11,9 @@ import { NavBar } from './components/NavBar/NavBar';
 import Forbidden from './pages/Forbidden';
 
 export default function App() {
+  const basename = import.meta.env.PROD ? '/crm/' : undefined;
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <NavBar />
       <Routes>
         <Route path="/login" element={<LoginForm />} />
